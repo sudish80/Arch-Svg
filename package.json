@@ -1,0 +1,10 @@
+{
+  "name": "arch-svg",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI architectural top-view floor plan generator - SVG output via NVIDIA LLM API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

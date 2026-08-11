@@ -1,0 +1,8 @@
+node_modules/
+config.js
+config.local.js
+*.log
+*.err.log
+geo-test.mjs
+api-sanity.mjs
+sheet-test-*

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCH SVG - AI Floor Plan Drafter</title>
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  html, body, #root { height: 100%; margin: 0; }
+  body { background: #E4DFCF; }
+  header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 18px; background: #1B2430; color: #F7F5EE;
+    font-family: "JetBrains Mono", Consolas, monospace;
+  }
+  header .brand { font-weight: 700; letter-spacing: 0.08em; font-size: 15px; }
+  header .brand span { color: #D9A24A; }
+  header .sub { font-size: 11px; color: #9AA3B2; }
+  #root { padding: 0; }
+  .shell { height: calc(100% - 42px); padding: 14px; box-sizing: border-box; }
+  footer {
+    font-family: "JetBrains Mono", Consolas, monospace; font-size: 10px;
+    color: #5B6472; text-align: center; padding: 6px 10px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">ARCH<span>SVG</span></div>
+  <div class="sub">AI floor-plan drafter &middot; NVIDIA LLM renders dimensioned SVG</div>
+</header>
+<div class="shell">
+  <div id="root"></div>
+</div>
+<footer>node server.js &rarr; localhost:3000 &middot; per-floor SVG via NVIDIA NIM API (SSE) &middot; schematic fallback included &middot; NTS</footer>
+<script type="text/babel" src="app.jsx"></script>
+<script type="text/babel">
+  ReactDOM.createRoot(document.getElementById("root")).render(<FloorPlanDrafter />);
+</script>
+</body>
+</html>
