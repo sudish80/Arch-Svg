@@ -6,3 +6,4 @@ config.local.js
 geo-test.mjs
 api-sanity.mjs
 sheet-test-*
+make-example.cjs
